@@ -1,8 +1,8 @@
-version: "1"
+version: "3"
 services:
-  go-docker-image:
-    build: ./
-    ports:
+  go-docker-image:  #Нужно создать образ go-docker-image
+    build: ./       #Образ должен быть собран с использованием Dockerfile в директории ./
+    ports:          #Сопоставляем порты
       - '80:80'
     volumes:
-      - ./:/app
+      - ./:/app     #Устанавливаем директорию хоста в директорию /app контейнера Docker
